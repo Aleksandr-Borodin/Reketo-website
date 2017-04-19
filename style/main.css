@@ -1,0 +1,1162 @@
+body	{
+  background:  url(../images/fon.jpg) no-repeat fixed center top;  
+  background-size: cover;
+  margin: 0;
+}
+/* Логотип страницы */
+.reket {
+  display: block;
+  font: 7.81vw "MyriadProRegular";
+  margin: 10.27vw auto 0;
+  text-align: center;
+  letter-spacing: .52vw;
+  padding-right: 1.56vw;
+}
+.reket a,
+.but {
+  text-decoration: none;
+  color: #9fd46c;
+  text-shadow: rgba(159, 212, 108, .4) .05vw 0 0, rgba(159, 212, 108, .4) .05vw 0 0;
+}
+.reket span {
+  margin: -2.08vw;
+  color: #fff;
+  text-shadow: #e7e7e7 .05vw 0 0;
+}
+.reket,
+.text-p,
+.but {
+  text-transform: uppercase;
+}
+/* Подпись под логотипом */
+.text-p {
+  font: bold .72vw "MyriadProRegular";
+  color: #a8aaad;
+  margin: -1.3vw auto 1.56vw;  
+  text-align: center;
+  letter-spacing: .07vw;
+}
+/* Контейнер с 2-я кнопками */
+#cont-but {
+  margin: 0 auto .52vw;
+  text-align: center;
+}
+.but {
+  font: .72vw "MyriadProRegular";
+  color: #1d2d23;
+  text-shadow: #5a773f .05vw 0 0;  
+  letter-spacing: .05vw;
+  display: inline-block;
+  padding: 1.04vw 0;
+  width: 16.14vw;
+  background: #9fd46c;
+  border-radius: 1.45vw;
+}
+.but:hover {
+  opacity: .8;
+}
+/* "Белый" цвет правой кнопки */
+.but:nth-child(2) {
+  margin-left: 1.4vw;  
+  background: #e3e1e1;
+}
+/* Слайдер */
+/* Относительно этого блока будет выполнятся позиционирование кнопок */
+#m-ban {
+  width: 42.44vw;
+  height: 6.45vw;
+  margin: 2.6vw auto 1.35vw;
+  position: relative;
+}
+/* Относительно этого блока будет выполнятся позиционирование ленты со слайдами и обрезание лишних слайдов */
+#m-ban2 {
+  width: 42.44vw;
+  height: 100%;
+  overflow: hidden;	/* Чтобы скрыть содержание слайдера выходящее за рамки */
+  position: relative;
+}
+/* Лента со слайдами */
+#lenta {
+  /* 9 - количество слайдов */
+  width: calc(15.36vw*9 - 3.64vw);
+  height: 100%;
+  position: absolute;
+  left: -46.09vw;
+  transition: all 0.5s ease-out;
+}
+/* Параметры элементов форм слайдера */
+#sl1:checked ~ #m-ban2 #lenta {
+  left: 0;
+}
+#sl2:checked ~ #m-ban2 #lenta {
+  left: -15.36vw;
+}
+#sl3:checked ~ #m-ban2 #lenta {
+  left: -30.72vw;
+}
+#sl4:checked ~ #m-ban2 #lenta {
+  left: -46.09vw;
+}
+#sl5:checked ~ #m-ban2 #lenta {
+  left: -61.44vw;
+}
+#sl6:checked ~ #m-ban2 #lenta {
+  left: -76.8vw;
+}
+#sl7:checked ~ #m-ban2 #lenta {
+  left: -92.16vw;
+}
+#sl1, #sl2, #sl3, #sl4, #sl5, #sl6, #sl7 {
+  display: none;
+}
+#cont label {
+  position: absolute;
+  display: none;
+  width: 1.87vw;
+  height: 1.77vw;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: url(../images/ar-but.png) no-repeat;
+  background-size: 100% 100%;
+}
+#sl1:checked ~ #cont label:nth-child(2),
+#sl2:checked ~ #cont label:nth-child(3),
+#sl3:checked ~ #cont label:nth-child(4),
+#sl4:checked ~ #cont label:nth-child(5),
+#sl5:checked ~ #cont label:nth-child(6),
+#sl6:checked ~ #cont label:nth-child(7),
+#sl7:checked ~ #cont label:nth-child(1) {
+  display: block;
+  right: -2.91vw;
+}
+#sl1:checked ~ #cont label:nth-child(7),
+#sl2:checked ~ #cont label:nth-child(1),
+#sl3:checked ~ #cont label:nth-child(2),
+#sl4:checked ~ #cont label:nth-child(3),
+#sl5:checked ~ #cont label:nth-child(4),
+#sl6:checked ~ #cont label:nth-child(5),
+#sl7:checked ~ #cont label:nth-child(6) {
+  display: block;
+  left: -2.91vw;
+  transform: rotate(200grad);
+}
+#cont label:active {
+  background: url(../images/ar-but2.png) no-repeat;
+  background-size: 100% 100%;
+}
+#cont label:hover, #cont label:active {
+  cursor: pointer;
+}
+/* Соотношение ширины\высоты: 1.81 */
+.icon {
+  float: left;
+  width: 11.71vw;
+  height: 100%;
+  margin-left: 3.64vw;  
+}
+.icon:first-child {
+  margin-left: 0;
+}
+/* Маштабирование картинки под слайд */
+.icon img {
+  width: 100%;
+  height: 100%;
+}
+/* Нижняя подпись слайдера */
+#text-p2 {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: -2.18vw;	/* размер шрифта + 29px */
+  font: normal .93vw "MyriadProRegular";
+  text-transform: none;
+  letter-spacing: .13vw;
+}
+/* Панель социальных сетей */
+#soc {
+  margin: 6.77vw auto 0;
+  width: 10.41vw;
+  text-align: center;
+}
+/* Абзац в панели соц. сетей */
+#t-soc {
+  font: normal .83vw "MyriadProRegular";
+  color: #9f9fab;
+  margin-bottom: .93vw;
+}
+/* Кнопки - общие свойства */
+.soc-but {
+  display: inline-block;
+  width: 1.04vw;
+  height: 1.04vw;
+  background: blue;
+  margin-left: .78vw;
+  vertical-align: top;
+}
+/* Кнопка: facebook */
+.soc-but1 {
+  background: url(../images/soc/face.png) no-repeat center;
+  background-size: cover;
+  margin-left: 0;
+}
+/* Кнопка: google+ */
+.soc-but2 {
+  background: url(../images/soc/goog.png) no-repeat center;
+  background-size: cover;
+}
+/* Кнопка: vkontakte */
+.soc-but3 {
+  background: url(../images/soc/vk.png) no-repeat center 8%;
+  background-size: 93% 93%;
+}
+/* Кнопка: odnoklasniki */
+.soc-but4 {
+  background: url(../images/soc/ok.png) no-repeat center;
+  background-size: cover;
+}
+/* Всплывающее окно входа на сайт */
+.m1 {
+  background: url(../images/f-m.png);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: -100%;
+  overflow: hidden;
+  display: none;
+}
+.m1:target {
+  display: block;
+  top: 0;
+}
+/* Область кнопки закрытия: все окно, кроме блока с кнопками */
+.zakr {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* Блок ввода данных */
+.okno-v {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 14.21vw;
+  height: 28.12vw;
+  margin: 12.5% auto 0;
+  text-align: center;
+}
+/* Уменьшеный логотип сайта */
+.m-l {
+  margin: 0;
+  text-align: center;
+  font: 1.87vw "MyriadProRegular";
+  color: #9fd46c;
+  text-shadow: rgba(159, 212, 108, .4) .05vw 0 0, rgba(159, 212, 108, .4) .05vw 0 0;
+  padding: 0;
+  margin-bottom: .52vw;
+  text-transform: uppercase;
+  letter-spacing: .31vw;
+}
+.m-l span {
+  color: #fff;
+  text-shadow: #808288 .05vw 0 0;
+  margin-left: -.83vw;
+}
+/* Поле ввода логина */
+.v-t {
+  width: 100%;
+  height: 2.76vw;
+  border: .05vw solid #0f0f11;
+  box-sizing: border-box;
+  border-radius: .26vw;
+  margin-top: .93vw;
+  padding-left: 2.6vw;
+  color: #9095aa;
+  font: .72vw "MyriadProRegular";
+}
+/* Параметры фокуса ввода логина и паролая */
+.v-t:focus {
+  border: .1vw solid #2d737a;
+  outline: none;
+  color: #f2f2f5;
+}
+.in-log {
+  background: url(../images/login.png) no-repeat .57vw .72vw, linear-gradient(#394264, #394264);
+  background-size: 1.3vw .93vw;
+}
+.in-pas {
+  background: url(../images/pass.png) no-repeat .67vw .46vw, linear-gradient(#394264, #394264);
+  background-size: .93vw 1.25vw;
+}
+/* Кнопка: войти */
+.in-sub {
+  width: 73%;
+  height: 2.6vw;
+  margin: 1.51vw auto .88vw;
+  background: #1abc9c;
+  border-radius: .26vw;
+  border: none;
+  font: .93vw "MyriadProRegular";
+  color: #fff;
+  letter-spacing: .05vw;
+}
+.in-sub:hover {
+  cursor: pointer;
+}
+.in-sub:active {
+  outline: none;
+}
+/* Кнопки: регистрации и востановления пароля */
+.registr {
+  text-decoration: none;
+  color: #c0c1c4;
+  font: .62vw "MyriadProRegular";
+}
+.registr:hover {
+  color: #9e9fa1;
+}
+.registr + .registr {
+  margin-left: .41vw;
+}
+.reg-sc {
+  display: block;
+  float: left;
+  width: 100%;
+  padding: .83vw 0;
+  text-align: left;
+  padding-left: 4.42vw;
+  box-sizing: border-box;
+  font: .72vw "MyriadProRegular";
+  color: #e4cece;
+  text-decoration: none;
+}
+.reg-sc:hover {
+  opacity: .9;
+}
+.reg-sc1 {
+  margin-top: 1.3vw;
+  background: url(../images/soc/face.png) no-repeat 1.82vw .52vw, linear-gradient(#014b96, #014b96);
+  background-size: 1.56vw 1.56vw;
+}
+.reg-sc2 {
+  background: url(../images/soc/goog.png) no-repeat 1.82vw .52vw, linear-gradient(#9b4746, #9b4746);
+  background-size: 1.56vw 1.56vw;
+}
+.reg-sc3 {
+  background: url(../images/soc/vk.png) no-repeat 1.82vw .52vw, linear-gradient(#4285f4, #4285f4);
+  background-size: 1.56vw 1.56vw;
+}
+.reg-sc4 {
+  background: url(../images/soc/ok.png) no-repeat 1.82vw .52vw, linear-gradient(#f6881f, #f6881f);
+  background-size: 1.56vw 1.56vw;
+  border-radius: 0 0 .26vw .26vw;
+}
+/* Изменение высоты окна регистрации" */
+#okno-reg {
+  height: 30.72vw;
+}
+/* Параметры для видео: после нажатия: "как это работает" */
+#okno-video, iframe {
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 60.93vw;
+  height: 31.25vw;
+  border: none;  
+}
+/* Окошко с аккаунтом пользователя */
+.prof {
+  margin: 1.77vw 1.82vw 2.08vw 3.38vw;
+  width: 15vw;
+  position: fixed;
+}
+/* Кнопка открывающая фильтры */
+.filtr {
+  display: block;
+  float: right;
+  width: 1.82vw;
+  height: 1.82vw;
+  margin-top: 13.28vw;
+  background: url(../images/filtr.png) no-repeat;
+  background-size: 100% 100%;
+  border-radius: 50%;
+}
+.filtr:active {
+  background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0, .5)), url(../images/filtr.png) no-repeat;
+  background-size: 100% 100%;
+}
+/* Название-логотип сайта - мини-версия в профайле и в конкретной рекомендации  */
+.mini {
+  font-size: 1.87vw;
+  margin: 0;
+}
+.mini span {
+  margin-left: -.88vw;
+}
+/* Блок с фото пользователся в его аккаунте */
+.photo-p {
+  width: 5.2vw;
+  height: 5.2vw;
+  margin: 3.9vw auto 1.45vw;
+  border-radius: 50%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.photo-p img {
+  width: 100%;
+  height: 100%;
+}
+/* Имя и фамилия пользователя */
+.imf {
+  font: 1.25vw "MyriadProRegular";
+  margin: 0 0 3.59vw;
+  color: #9fd46c;
+  text-shadow: #374834 -.05vw 0 0; 
+  text-align: center;
+  overflow: hidden;
+}
+/* Меню самого пользователя */
+.l-menu {
+  text-align: left;
+  color: #c0c1c3;
+  font: bolder .93vw  "MyriadProRegular";
+  letter-spacing: .04vw;
+}
+.l-menu:hover {
+  color: #eeeff2;
+}
+/* Меню выбора по времени */
+.osn-menu {
+  text-align: center;
+  text-transform: uppercase;
+  color: #6e727b;
+  font: bolder .83vw  "MyriadProRegular";
+  line-height: .83vw;
+  margin-top: 1.97vw;
+  letter-spacing: .07vw;
+}
+.osn-menu:hover{
+  color: #88af70;
+  text-decoration: line-through;
+}
+/* Фильтры-флажки */
+input[type="checkbox"] {
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+label {
+  display: block;
+  float: left;
+  width: 100%;
+  margin-top: .9vh;
+}
+label input:checked + .osn-menu{
+  color: #88af70;
+  text-decoration: line-through;
+}
+.l-menu, .osn-menu {
+  display: block;
+  text-decoration: none;
+}
+/* Всплывающее окно с дополнительными фильтрами */
+.menu-filtr {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  z-index: 2;
+  background: url(../images/f-p.png) repeat;
+}
+/* Включение всплыв. окна с допол. фильтрами */
+.menu-filtr:target {
+  display: block;
+}
+.menu-filtr .prof {
+  position: absolute;
+  top:0;
+  left:0;
+}
+/* Собственно само нижнее окно */
+.n-o {
+  width: 77.72vw;
+  position: absolute;
+  right: 0;
+  top: 21vh;
+}
+/* Ширина для первых 3-х блоков */
+.n-o4 {
+  float: left;
+  width: calc(100%/4);
+}
+/* Ширина для 4 блока */
+#n-o5 {
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5vw;
+}
+/* Окно с рекомендациями */
+.okno-recom {
+  float: left;
+  margin: .52vw auto 0 18.7vw;
+  width: 81%;
+}
+/* Блок с превью рекомендацией - средний размер */
+.mid-rec {
+  display: none;
+  width: calc(100% - .1vw);
+  height: calc(100% - .1vw);
+  background: #111520;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: .05vw solid #fff;
+  z-index: 1;
+}
+.vv {
+  top: calc(-100% - 1.56vw);
+}
+.sma-rec a:hover + .mid-rec {
+  display: block;
+}
+.sma-rec:hover .mid-rec {
+  display: block;
+}
+.mid-rec:hover {
+  display: block;
+}
+.mid-rec h2,
+.sma-rec > h2 {
+  font: .72vw "MyriadProRegular";
+  color: #c5cac6;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: .07vw;
+  margin: 1.51vw 1.56vw 1.04vw;
+}
+.mid-rec .but {
+  display: block;
+  width: 83%;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  text-shadow: #cce8b1 .05vw 0 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1.35vw;
+}
+.podel {
+  margin: 0 0 0 1.56vw;
+  width: 35%;
+  font: .72vw "MyriadProRegular";
+  color: #bbbfc8;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: .07vw;
+  float: left;
+}
+.podel:after {
+  content: " : ";
+}
+/* Блок с рекомендацией 348 на 250 px */
+.sma-rec {
+  margin: 1.56vw 0 0 1.56vw;
+  width: 18.12vw;
+  height: 13.02vw;
+  background: #959fab;
+  float: left;
+  position: relative;
+}
+/* Заголовок каждой маленькой рекомендации */
+.sma-rec > h2 {
+  height: 30%;
+  width: 100%;
+  font-size: .78vw;
+  background: #1e232d;
+  text-align: left;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding: .93vw .78vw 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+/* Чтобы картинка не выежала за границы блока */
+.sma-rec  > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.sma-rec img {
+  height: 100%;
+}
+/* Кнопка: Показать еще */
+.nk {
+  display: block;
+  float: left;
+  clear: left;
+  width: 15vw;
+  margin: 3.33vw auto 0 51.34vw;
+  text-align: center;
+  color: #fff;
+  text-shadow: #cce8b1 .05vw 0 0;
+  border: none;
+}
+.nk2 {
+  border: none;
+  color: #fff;
+  width: 12.76vw;
+  text-shadow: #cce8b1 .05vw 0 0;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 3.8vw;
+}
+/* Добавить-убрать эффекты при наведении-нажатии */
+.nk:hover, .nk2:hover {
+  cursor: pointer;
+}
+.nk:active, .nk2:active {
+  outline: none;
+}
+/* Всплывающее окно с 24 слайдами */
+.okno-recom2 {
+  display: none;
+  margin-top: 0;
+  float: right;
+}
+.okno-recom2:target {
+  display: block;
+}
+/* Правое окошко с рекомендацией */
+#b-r {
+  width: 44.79vw;
+  margin: 2.08vw auto auto 27.65vw;
+  float: left;
+}
+/* Для окна с конкретной 1-й рекомендацией */
+.col,
+.col + .imf {
+  color: #f5f8ff;
+  margin: 0;
+}
+#fp {
+  width: 100%;
+  height: 34.89vw;
+  background: #7f8794;
+}
+/* Блок с большой картинкой-рекомендацией */
+#fp div {
+  width: 100%;
+  height: 50%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+/* Маштабирование картинки */
+#fp img {
+  width: 100%;
+}
+#b-r h2 {
+  font: .93vw "MyriadProRegular";
+  color: #131a22;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .07vw;
+}
+#b-r h2 + p {
+  width: 84%;
+  margin: 1.56vw auto 0;
+  text-align: justify;
+  font: .72vw "MyriadProRegular";
+  color: #060c18;
+  overflow: hidden;
+  letter-spacing: .05vw;
+}
+/* Лайк */
+.serd {
+  width: 3.43vw;
+  height: 3.43vw;
+  margin: 0 auto;
+  position: relative;
+  line-height: 3.43vw;  
+}
+.serd a {
+  display: block;
+  width: 1.4vw;
+  height: 1.14vw;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.serd img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.serd span {
+  margin-left: 2.08vw;
+  font: .93vw "MyriadProRegular";
+  color: #87b260;
+}
+.serd a:active {
+  animation: jello .2s linear;
+  transform-origin: center;
+}
+@keyframes jello {
+  from, 11.1%, to {transform: none;}
+  22.2% {transform: skewX(-12.5deg) skewY(-12.5deg);}
+  33.3% {transform: skewX(6.25deg) skewY(6.25deg);}
+  44.4% {transform: skewX(-3.125deg) skewY(-3.125deg);}
+  55.5% {transform: skewX(1.5625deg) skewY(1.5625deg);}
+  66.6% {transform: skewX(-0.78125deg) skewY(-0.78125deg);}
+  77.7% {transform: skewX(0.390625deg) skewY(0.390625deg);}
+  88.8% {transform: skewX(-0.1953125deg) skewY(-0.1953125deg);}
+}
+.serd + .but {
+  display: block;
+  width: 33%;
+  margin: 0 auto 4.01vw;
+  text-align: center;
+}
+/* Начните рекомендовать - маленькая версия */
+#b-r .but + a {
+  display: block;
+  float: left;
+  font: .72vw "MyriadProRegular";
+  color: #bbbfc8;
+  text-transform: uppercase;
+  letter-spacing: .07vw;
+  text-decoration: none;  
+}
+/* Поделиться */
+#b-r .podel {
+  margin-left: 4.06vw;
+  width: 16%;
+}
+/* Крестик закрытия окна */
+.krest {
+  display: block;
+  width: .93vw;
+  height: .93vw;
+  background: url(../images/krest.png) no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 2.08vw;
+  right: 3.38vw;
+}
+
+/* font-family: "MyriadProRegular"; */
+@font-face {
+  font-family: "MyriadProRegular";
+  src: url("../fonts/MyriadProRegular/MyriadProRegular.eot");
+  src: url("../fonts/MyriadProRegular/MyriadProRegular.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"),
+  url("../fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* Медиа-запросы */
+@media all and (max-width: 1130px) {
+  .reket {
+    font: 88.72px "MyriadProRegular";
+    margin: 116.66px auto 0;
+    letter-spacing: 5.9px;
+    padding-right: 17.72px;
+  }
+  .reket a,
+  .but {
+    text-shadow: rgba(159, 212, 108, .4) .56px 0 0, rgba(159, 212, 108, .4) .56px 0 0;
+  }
+  .reket span {
+    margin: -23.62px;
+    text-shadow: #e7e7e7 .56px 0 0;
+  }
+  .text-p {
+    font: bold 8.17px "MyriadProRegular";
+    margin: -14.76px auto 17.72px;
+    letter-spacing: .79px;
+  }
+  #cont-but {
+    margin: 0 auto 5.9px;
+  }
+  .but {
+    font: 8.17px "MyriadProRegular";
+    text-shadow: #5a773f .56px 0 0;  
+    letter-spacing: .56px;
+    padding: 11.81px 0;
+    width: 183.35px;
+    border-radius: 16.47px;
+  }
+  .but:nth-child(2) {
+    margin-left: 15.9px;
+  }
+  #m-ban {
+    width: 482.11px;
+    height: 73.27px;
+    margin: 29.53px auto 15.33px;
+  }
+  #m-ban2 {
+    width: 482.11px;
+  }
+  #lenta {
+    width: calc(174.48px*9 - 41.35px);
+    left: -523.58px;
+  }
+  .icon {
+    float: left;
+    width: 133.02px;
+    margin-left: 41.35px;  
+  }
+  .b-pn {
+    width: 21.24px;
+    height: 20.1px;
+  }
+  .b-pn:first-of-type {
+    left: -33.05px;
+  }
+  .b-pn:last-of-type {
+    right: -33.05px;
+  }
+  #text-p2 {
+    bottom: -24.76px;
+    font: normal 10.56px "MyriadProRegular";
+    letter-spacing: 1.47px;
+  }
+  #soc {
+    margin: 76.9px auto 0;
+    width: 118.25px;
+    text-align: center;
+  }
+  #t-soc {
+  font: normal 9.42px "MyriadProRegular";
+  margin-bottom: 10.56px;
+  }
+  .soc-but {
+    width: 11.81px;
+    height: 11.81px;
+    margin-left: 8.86px;
+  }
+  .okno-v {
+    width: 161.42px;
+    height: 319.44px;
+  }
+  .m-l {
+    font: 21.24px "MyriadProRegular";
+    text-shadow: rgba(159, 212, 108, .4) .56px 0 0, rgba(159, 212, 108, .4) .56px 0 0;
+    margin-bottom: 5.9px;
+    letter-spacing: 3.52px;
+  }
+  .m-l span {
+    text-shadow: #808288 .56px 0 0;
+    margin-left: -9.42px;
+  }
+  .v-t {
+    height: 31.35px;
+    border: .56px solid #0f0f11;
+    border-radius: 2.95px;
+    margin-top: 10.56px;
+    padding-left: 29.53px;
+    font: 8.17px "MyriadProRegular";
+  }
+  .v-t:focus {
+    border: 1.13px solid #2d737a;
+  }
+  .in-log {
+    background: url(../images/login.png) no-repeat 6.47px 8.17px, linear-gradient(#394264, #394264);
+    background-size: 14.76px 10.56px;
+  }
+  .in-pas {
+    background: url(../images/pass.png) no-repeat 7.61px 5.22px, linear-gradient(#394264, #394264);
+    background-size: 10.56px 14.2px;
+  }
+  .in-sub {
+    height: 29.53px;
+    margin: 17.15px auto 9.99px;
+    border-radius: 2.95px;
+    font: 10.56px "MyriadProRegular";
+    letter-spacing: .56px;
+  }
+  .registr {
+    font: 7.04px "MyriadProRegular";
+  }
+  .registr + .registr {
+    margin-left: 4.65px;
+  }
+  .reg-sc {
+    padding: 9.42px 0;
+    padding-left: 50.21px;
+    font: 8.17px "MyriadProRegular";
+  }
+  .reg-sc1 {
+    margin-top: 14.76px;
+    background: url(../images/soc/face.png) no-repeat 20.67px 5.9px, linear-gradient(#014b96, #014b96);
+    background-size: 17.72px 17.72px;
+  }
+  .reg-sc2 {
+    background: url(../images/soc/goog.png) no-repeat 20.67px 5.9px, linear-gradient(#9b4746, #9b4746);
+    background-size: 17.72px 17.72px;
+  }
+  .reg-sc3 {
+    background: url(../images/soc/vk.png) no-repeat 20.67px 5.9px, linear-gradient(#4285f4, #4285f4);
+    background-size: 17.72px 17.72px;
+  }
+  .reg-sc4 {
+    background: url(../images/soc/ok.png) no-repeat 20.67px 5.9px, linear-gradient(#f6881f, #f6881f);
+    background-size: 17.72px 17.72px;
+    border-radius: 0 0 2.95px 2.95px;
+  }
+  #okno-reg {
+    height: 348.97px;
+  }
+  #okno-video, iframe {
+    width: 692.16px;
+    height: 355px; 
+  }
+  .prof {
+    margin: 23.62px 20.67px 23.62px 38.39px;
+    width: 170.36px;
+  }
+  .filtr {
+    width: 20.67px;
+    height: 20.67px;
+    margin-top: 150.86px;
+  }
+  .mini {
+    font-size: 21.24px;
+    margin: 0;
+  }
+  .mini span {
+    margin-left: -9.99px;
+  }
+  .photo-p {
+    width: 59.07px;
+    height: 59.07px;
+    margin: 44.3px auto 16.47px;
+  }
+  .imf {
+    font: 14.2px "MyriadProRegular";
+    margin: 0 0 40.78px;
+    text-shadow: #374834 -.56px 0 0;
+  }
+  .col,
+  .col + .imf {
+    margin: 0;
+  }
+  .l-menu {
+    font: bolder 10.56px  "MyriadProRegular";
+    letter-spacing: .45px;
+  }
+  .osn-menu {
+    font: bolder 9.42px  "MyriadProRegular";
+    margin-top: 22.37px;
+    letter-spacing: .79px;
+  }
+  .okno-recom {
+    margin: 5.9px auto 0 212.42px;
+    width: calc(100% - 212.42px);
+    min-width: 448.12px;
+  }
+  .mid-rec {
+    width: calc(100% - 1.13px);
+    height: calc(100% - 1.13px);
+    border: .56px solid #fff;
+  }
+  .vv {
+    top: calc(-100% - 17.72px);
+  }
+  .mid-rec h2,
+  .sma-rec > h2 {
+    font: 8.17px "MyriadProRegular";
+    letter-spacing: .79px;
+    margin: 17.15px 17.72px 11.81px;
+  }
+  .mid-rec .but {
+    margin: 0 auto;
+    text-shadow: #cce8b1 .56px 0 0;
+    bottom: 15.33px;
+  }
+  .podel {
+    margin: 0 0 0 17.72px;
+    font: 8.17px "MyriadProRegular";
+    letter-spacing: .79px;
+  }
+  .sma-rec {
+    margin: 17.72px 0 0 17.72px;
+    width: 205.84px;
+    height: 147.9px;
+  }
+  .sma-rec > h2 {
+    margin: 0;
+    font-size: 8.86px;
+    padding: 10.56px 8.86px 0;
+  }
+  .nk {
+    width: 170.4px;
+    margin: 37.82px auto 7.61px 583.22px;
+    text-shadow: #cce8b1 .56px 0 0;
+  }
+  .nk2 {
+    width: 144.95px;
+    text-shadow: #cce8b1 .56px 0 0;
+    bottom: 44.08px;
+  }
+  #b-r {
+    width: 508.81px;
+    margin: 23.62px 0 auto 313.79px;
+  }
+  #fp {
+    height: 396.35px;
+  }
+  #b-r h2 {
+    font: 10.56px "MyriadProRegular";
+    letter-spacing: .79px;
+  }
+  #b-r h2 + p {
+    margin: 17.72px auto 0;
+    font: 8.17px "MyriadProRegular";
+    letter-spacing: .56px;
+  }
+  .serd {
+    width: 38.96px;
+    height: 38.96px;
+    line-height: 38.96px;  
+  }
+  .serd a {
+    width: 15.9px;
+    height: 12.95px;
+  }
+  .serd span {
+    margin-left: 23.62px;
+    font: 10.56px "MyriadProRegular";
+  }
+  .serd + .but {
+    margin: 0 auto 45.55px;
+  }
+  #b-r .but + a {
+    font: 8.17px "MyriadProRegular";
+    letter-spacing: .79px;
+  }
+  #b-r .podel {
+    margin-left: 46.12px;
+  }
+  .krest {
+    width: 10.56px;
+    height: 10.56px;
+    top: 23.62px;
+    right: 38.39px;
+  }
+  label .osn-menu{
+    margin-top: 0;
+  }
+  .n-o {
+    width: 882.89px;
+  }
+  #n-o5 {
+    bottom: -56.8px;
+  }
+}
+
+@media all and (max-width: 1105px) {
+  .nk {
+    margin-left: 471.42px;  
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .menu-filtr .prof {
+    display: none;
+  }
+}
+
+@media all and (max-width: 950px) {
+  #b-r {
+    margin-left: 264.79px;
+  }
+}
+
+@media all and (max-width: 900px) {
+  #b-r {
+    margin-left: 214.79px;
+  }
+}
+
+@media all and (max-width: 883px) {
+  .nk {
+    margin-left: 368.5px;  
+  }
+}
+
+@media all and (max-width: 840px) {
+  .n-o {
+    width: 100%;
+  }
+  .menu-filtr {
+    top: 0;
+  }
+}
+
+@media all and (max-width: 780px) {
+  #b-r {
+    margin-left: 194.79px;
+  }
+  .krest {
+    right: 10px;
+  }
+}
+
+@media all and (max-width: 730px) {
+  .krest {
+    top: 5px;
+    right: 0;
+  }
+}
+
+@media all and (max-width: 660px) {
+  .prof {
+    position: static;
+    width: 100%;
+      margin: 0;
+  }
+  .filtr {
+    float: none;
+    margin: 0 auto;
+  }
+  .l-menu {
+    text-align: center;
+  }
+  .okno-recom {
+    float: none;
+    margin: 0 auto;
+    padding-right: 17.72px;
+  }
+  .nk {
+    float: none;
+    position: relative;
+    top: 38px;
+    margin: 0 auto 76px;
+  }
+  #b-r {
+    float: none;
+    margin: 20px auto;
+  }
+  .krest {
+    top: 5px;
+    right: 5px;
+  }
+}
