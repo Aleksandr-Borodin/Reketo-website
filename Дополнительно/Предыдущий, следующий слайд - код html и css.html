@@ -1,0 +1,28 @@
+<!-- Вставить перед p Лучшие рекомендации -->
+<a href="#" class="b-pn"></a>
+<a href="#" class="b-pn"></a>
+
+
+/* Кнопки: предыдущий, следующий слайд */
+.b-pn {
+  position: absolute;
+  display: block;
+  width: 1.87vw;
+  height: 1.77vw;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  background: url(../images/ar-but.png) no-repeat;
+  background-size: 100% 100%;
+}
+.b-pn:active {
+  background: url(../images/ar-but2.png) no-repeat;
+  background-size: 100% 100%;
+}
+.b-pn:first-of-type {
+  left: -2.91vw;
+  transform: rotate(200grad);
+}
+.b-pn:last-of-type {
+  right: -2.91vw;
+}
