@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel = "stylesheet" href = "style/main.css">
+  <meta http-equiv = "content-type" content = "text/html; charset=utf-8">
+  <title>Reketo</title>
+  <script src="js/prefixfree.min.js"></script>
+</head>
+<body>
+  <!-- Шапка-логотип сайта -->
+  <h1 class="reket">
+    <a href="index.html">
+      Rek
+      <span>eto</span>
+    </a>
+  </h1>
+  <!-- Подпись под логотипом сайта -->
+  <p class="text-p">
+    Рекомендуйте своим друзьям то, что стало Вам полезным
+  </p>
+  <!-- Основные кнопки -->
+  <nav id="cont-but">
+    <a href="#va" class="but">
+      Начните рекомендовать
+    </a>
+    <a href="#vc" class="but">
+      Как это работает
+    </a>
+  </nav>
+  <!-- Меню со слайдером --> 
+  <div id="m-ban">
+    <!-- Переключатели позици ленты со слайдами -->
+    <input type=radio name=sli id=sl1>
+    <input type=radio name=sli id=sl2>
+    <input type=radio name=sli id=sl3>
+    <input checked type=radio name=sli id=sl4>
+    <input type=radio name=sli id=sl5>
+    <input type=radio name=sli id=sl6>
+    <input type=radio name=sli id=sl7>
+    <div id="m-ban2">
+      <div id="lenta">
+        <!-- Создано 9-ть слайдеров, для наглядности -->
+        <div class="icon">
+          <a href="#">
+            <img src="images/ban/lit/kart1.jpg" alt="Картинка 1">
+          </a>
+        </div>
+        <div class="icon">
+          <a href="#">
+            <img src="images/ban/lit/kart2.jpg" alt="Картинка 2">
+          </a>
+        </div>
+        <div class="icon">
+          <a href="#">
+            <img src="images/ban/lit/kart3.jpg" alt="Картинка 3">
+          </a>
+        </div>
+        <div class="icon">
+          <a href="#">
+            <img src="images/ban/lit/kart4.jpg" alt="Картинка 4">
+          </a>
+        </div>
+        <div class="icon">
+          <a href="#">
+            <img src="images/ban/lit/kart5.jpg" alt="Картинка 5">
+          </a>
+        </div>
+        <div class="icon">
+          <a href="#">
+            <img src="images/ban/lit/kart6.jpg" alt="Картинка 6">
+          </a>
+        </div>
+        <div class="icon">
+          <a href="#">
+            <img src="images/ban/lit/kart7.jpg" alt="Картинка 7">
+          </a>
+        </div>
+        <div class="icon">
+          <a href="#">
+            <img src="images/ban/lit/kart8.jpg" alt="Картинка 8">
+          </a>
+        </div>
+        <div class="icon">
+          <a href="#">
+            <img src="images/ban/lit/kart9.jpg" alt="Картинка 9">
+          </a>
+        </div>
+	    </div>
+	  </div>
+    <!-- Навигация: предыдущий-следующий -->
+    <div id=cont>
+      <label for=sl1></label>
+      <label for=sl2></label>
+      <label for=sl3></label>
+      <label for=sl4></label>
+      <label for=sl5></label>
+      <label for=sl6></label>
+      <label for=sl7></label>      
+    </div>
+	  <p class="text-p" id="text-p2">
+	    лучшие рекомендации
+	  </p>
+  </div>
+  <!-- Панель "социальных сетей" -->
+  <div id="soc">
+    <p class="text-p" id="t-soc">
+      расскажите о нас
+    </p>
+	<!-- Кнопки социальных сетей -->
+	<a href="#" class="soc-but soc-but1"></a>
+	<a href="#" class="soc-but soc-but2"></a>
+	<a href="#" class="soc-but soc-but3"></a>
+	<a href="#" class="soc-but soc-but4"></a>
+  </div>
+  <!-- Всплывающее окно входа на сайт: при нажатии "Начните рекомендовать" -->
+  <div id="va" class="m1">
+    <!-- Окно закрытия на весь экран: без отдельной кнопки -->
+    <a href="#close" class="zakr"></a>
+    <!-- Окно входа на сайт -->
+    <div class="okno-v">
+      <h4 class="m-l">
+        Rek
+        <span>eto</span>
+      </h4>
+      <form>
+        <input type="text" class="v-t in-log" placeholder="логин">
+        <input type="password" class="v-t in-pas" placeholder="пароль">
+        <input type="submit" class="in-sub" value="войти">
+      </form>
+      <a href="#" class="registr">забыли пароль?</a>
+      <a href="#vb" class="registr">регистрация</a>
+      <a href="#" class="reg-sc reg-sc1">с помощью facebook</a>
+      <a href="#" class="reg-sc reg-sc2">с помощью google</a>
+      <a href="#" class="reg-sc reg-sc3">с помощью vk</a>
+      <a href="#" class="reg-sc reg-sc4">с помощью ok</a>
+    </div>
+  </div>
+  <!-- Всплывающее окно регистрации -->
+  <div id="vb" class="m1">
+    <!-- Окно закрытия на весь экран: без отдельной кнопки -->
+    <a href="#close" class="zakr"></a>
+    <!-- Собственно - окно регистрации -->
+    <div class="okno-v" id="okno-reg">
+      <h4 class="m-l">
+        Rek
+        <span>eto</span>
+      </h4>
+      <form>
+        <input type="text" class="v-t in-log" placeholder="логин">
+        <input type="password" class="v-t in-pas" placeholder="пароль">
+        <input type="password" class="v-t in-pas" placeholder="повторите пароль">
+        <input type="submit" class="in-sub" value="зарегистрироваться">
+      </form>
+      <a href="#" class="reg-sc reg-sc1">с помощью facebook</a>
+      <a href="#" class="reg-sc reg-sc2">с помощью google</a>
+      <a href="#" class="reg-sc reg-sc3">с помощью vk</a>
+      <a href="#" class="reg-sc reg-sc4">с помощью ok</a>
+    </div>
+  </div>
+  <!-- Всплывающее окно видео: "как это работает" -->
+  <div id="vc" class="m1">
+    <!-- Окно закрытия на весь экран: без отдельной кнопки -->
+    <a href="index.html" class="zakr"></a>
+    <div class="okno-v" id="okno-video">
+      <iframe src="https://www.youtube.com/embed/wrXEAQ-rRNI?list=PLgZdSXmH7yfRHB9NiTOjCf1Nw39Fx8w1L" allowfullscreen></iframe>
+    </div>
+  </div>
+</body>
+</html>
